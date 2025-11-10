@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #000000;
+  min-height: 100vh; /* Ensure full viewport height and prevent body from collapsing */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  background: #1c1a1a;
+  padding: 40px;
+  border-radius: 20px;
+  width: 100%;
+  max-width: 500px;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 30px #000000b0;
+}
+
+.container:hover {
+  background: #221d1df2;
+  box-shadow: 0 8px 50px #0443589a;
+  transform: scale(1.01);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 32px;
+  /* • linear-gradient(...) — defines a color gradient in a straight direction. • 135deg — specifies the angle of the gradient line. - 0deg=top to bottom - 90deg=left to right - 135deg=diagonally from top-left to bottom-right So here,
+      the gradient flows diagonally. • #5b19e8 0% — starting color (purple shade) at the beginning of the gradient (0% mark). • #f02799 100% — ending color (pink shade) at the end of the gradient (100% mark).
+    -webkit-background-clip: text; /* Clip background to text */
+  background: linear-gradient(135deg, #5b19e8 0%, #f02799 100%);
+  -webkit-background-clip: text; /* Clip background to text */
+  -webkit-text-fill-color: transparent; /* Make text fill transparent to show background */
+  background-clip: text; /* Clip background to text */
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.input-container {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 15px 20px;
+  background: #333333cc;
+  border: 2px solid #ffffff1a;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 15px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #a855f7;
+  background: #333333;
+  box-shadow: 0 0 0 3px #a855f71a;
+}
+
+input[type="text"]::placeholder {
+  color: #ffffff66;
+}
+
+button {
+  padding: 15px 30px;
+  background: linear-gradient(135deg, #a855f7 0%, #ec4899 100%);
+  border: none;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px #f755ef66;
+}
+
+button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px #dc55f799;
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  background: #33333399;
+  padding: 18px 20px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #ffffff0d;
+  transition: all 0.3s ease;
+  animation: slideIn 1s ease;
+}
+
+li.remove {
+  opacity: 0;
+  transform: translateX(-200px) !important ;
+  transition: opacity 0.7s ease, transform 0.7s ease;
+
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  50% {
+    opacity: 0.8;
+    transform: translateY(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+li:hover {
+  background: #333333cc;
+  border-color: #ffffff1a;
+  transform: scale(1.02);
+}
+
+li span {
+  flex: 1; /* Take up remaining space */
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+  user-select: none; /* Prevent text selection on click */
+}
+
+li.completed span {
+  text-decoration: line-through;
+  color: #ffffffbe;
+}
+
+li button {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  border: none;
+  padding: 8px 16px;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(245, 87, 108, 0.3);
+}
+
+li button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 15px #f5576c80;
+}
