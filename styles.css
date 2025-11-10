@@ -182,7 +182,7 @@ li button:hover {
     padding: 15px 25px;
     font-size: 14px;
   }
-} 
+}
 
 @media (max-width: 768px) {
   .container {
